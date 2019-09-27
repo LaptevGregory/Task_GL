@@ -3,7 +3,7 @@
 #include <CUnit/Basic.h>
 #include <CUnit/Automated.h>
 
-#include "cunit_cases.h"
+#include "../include/cunit_cases.h"
 
 int main(int argc, char *argv[])
 {
@@ -22,9 +22,7 @@ int main(int argc, char *argv[])
     }
 
     // Add the tests to the suite
-    if ((NULL == CU_add_test(pSuite, "test_return_null_argument", test_return_null_argument)) ||
-	(NULL == CU_add_test(pSuite, "test_return_many_arguments", test_return_many_arguments)) ||
-	(NULL == CU_add_test(pSuite, "test_return_success_work", test_return_success_work))) 
+    if ((NULL == CU_add_test(pSuite, "test_to_lower_case_work_success", test_to_lower_case_work_success))) 
     {
         CU_cleanup_registry();
         return CU_get_error();

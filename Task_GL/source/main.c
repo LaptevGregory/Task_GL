@@ -26,9 +26,8 @@ int main(int argc, char* argv[])
 	char* ptoa = argv[1];
 
 	for(int i = 0; i < sizeof(str); i++)
-	{
 		str[i] = *ptoa++; 		
-	}
+	
 	printf("%s\nLine length %lu characters.\n", str, sizeof(str)-1);
 
 	//diff
